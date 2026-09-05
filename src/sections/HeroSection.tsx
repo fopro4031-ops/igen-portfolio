@@ -18,13 +18,27 @@ export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary
       <HeroGridBackground />
       <AmbientBackground strength="strong" />
 
+      {/* Mobile/tablet only: a faint watermark behind the text — low enough
+       * opacity that it can never hurt legibility even where it overlaps. */}
+      <m.div
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.1 }}
+        transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center lg:hidden"
+      >
+        <div className="relative aspect-square w-[85vw] max-w-[420px]">
+          <Image src={markSrc} alt="" fill sizes="420px" className="object-contain" />
+        </div>
+      </m.div>
+
       <Container className="relative z-10">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_420px]">
           <m.div
             variants={staggerContainer(0.12, 0.15)}
             initial="hidden"
             animate="visible"
-            className="max-w-2xl"
+            className="relative z-10 max-w-2xl"
           >
             <m.h1
               variants={staggerItem}
