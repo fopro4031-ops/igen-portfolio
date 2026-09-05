@@ -29,7 +29,7 @@ export function TypeOverImage({ block }: { block: TypeOverImageBlock }) {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to top, rgb(8 31 47) 0%, rgb(8 31 47 / 0.5) 25%, transparent 60%)",
+              "linear-gradient(to top, rgb(8 31 47) 0%, rgb(8 31 47) 40%, rgb(8 31 47 / 0.7) 55%, transparent 85%)",
           }}
         />
       </m.div>

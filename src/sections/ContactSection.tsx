@@ -1,7 +1,7 @@
 "use client";
 
 import { m } from "framer-motion";
-import { RibbonMotif } from "@/components/brand/RibbonMotif";
+import { LogoMark } from "@/components/brand/LogoMark";
 import { LinkButton } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { useScrollReveal } from "@/animations/hooks/useScrollReveal";
@@ -16,7 +16,7 @@ export function ContactSection({ dict }: { dict: Dictionary }) {
     <section id="contact" className="scroll-mt-24 py-28 md:py-36">
       <Container className="flex flex-col items-center text-center">
         <m.div ref={ref} initial="hidden" animate={controls} variants={fadeUp}>
-          <RibbonMotif state="hover" size={48} className="mx-auto mb-8" />
+          <LogoMark size={56} className="mx-auto mb-8" />
 
           <h2 className="font-display text-3xl font-semibold text-white md:text-5xl">
             {dict.contact.heading}

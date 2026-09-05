@@ -18,46 +18,50 @@ export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary
       <HeroGridBackground />
       <AmbientBackground strength="strong" />
 
-      <m.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-        className="pointer-events-none absolute -end-32 top-1/2 aspect-square w-[520px] -translate-y-1/2 opacity-40 md:-end-20 md:w-[720px] md:opacity-60"
-      >
-        <Image src={markSrc} alt="" fill sizes="720px" className="object-contain" priority />
-      </m.div>
-
-      <Container>
-        <m.div
-          variants={staggerContainer(0.12, 0.15)}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 max-w-3xl"
-        >
-          <m.h1
-            variants={staggerItem}
-            className="font-display text-4xl font-semibold leading-[1.05] text-white sm:text-5xl md:text-6xl lg:text-7xl"
+      <Container className="relative z-10">
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_420px]">
+          <m.div
+            variants={staggerContainer(0.12, 0.15)}
+            initial="hidden"
+            animate="visible"
+            className="max-w-2xl"
           >
-            {dict.hero.headlineLine1}{" "}
-            <span className="bg-linear-to-r from-accent-cyan to-ribbon-start bg-clip-text text-transparent">
-              {dict.hero.headlineHighlight}
-            </span>
-          </m.h1>
+            <m.h1
+              variants={staggerItem}
+              className="font-display text-4xl font-semibold leading-[1.05] text-white sm:text-5xl md:text-6xl lg:text-7xl"
+            >
+              {dict.hero.headlineLine1}{" "}
+              <span className="bg-linear-to-r from-accent-cyan to-ribbon-start bg-clip-text text-transparent">
+                {dict.hero.headlineHighlight}
+              </span>
+            </m.h1>
 
-          <m.p
-            variants={staggerItem}
-            className="mt-8 max-w-xl text-base text-steel md:text-lg"
-          >
-            {dict.hero.subhead}
-          </m.p>
+            <m.p
+              variants={staggerItem}
+              className="mt-8 max-w-xl text-base text-steel md:text-lg"
+            >
+              {dict.hero.subhead}
+            </m.p>
 
-          <m.div variants={staggerItem} className="mt-10 flex flex-wrap gap-4">
-            <LinkButton href={`/${locale}#work`}>{dict.hero.ctaWork}</LinkButton>
-            <LinkButton href={`/${locale}#contact`} variant="ghost">
-              {dict.hero.ctaStart}
-            </LinkButton>
+            <m.div variants={staggerItem} className="mt-10 flex flex-wrap gap-4">
+              <LinkButton href={`/${locale}#work`}>{dict.hero.ctaWork}</LinkButton>
+              <LinkButton href={`/${locale}#contact`} variant="ghost">
+                {dict.hero.ctaStart}
+              </LinkButton>
+            </m.div>
           </m.div>
-        </m.div>
+
+          {/* Reserved column, large breakpoint only — the mark never shares
+           * horizontal space with the text, so it can't overlap or crowd it. */}
+          <m.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+            className="relative hidden aspect-square w-full max-w-[420px] justify-self-center opacity-70 lg:block"
+          >
+            <Image src={markSrc} alt="" fill sizes="420px" className="object-contain" priority />
+          </m.div>
+        </div>
       </Container>
 
       <m.div

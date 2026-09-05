@@ -57,7 +57,7 @@ export default async function WorkIndexPage(props: PageProps<"/[locale]/work">) 
                     className="absolute inset-0"
                     style={{
                       backgroundImage:
-                        "linear-gradient(to top, rgb(8 31 47) 0%, rgb(8 31 47 / 0.6) 30%, transparent 65%)",
+                        "linear-gradient(to top, rgb(8 31 47) 0%, rgb(8 31 47) 42%, rgb(8 31 47 / 0.75) 58%, transparent 85%)",
                     }}
                   />
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">

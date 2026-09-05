@@ -55,12 +55,12 @@ export default async function ProjectPage(
             priority
             className="object-cover object-top"
           />
-          <div className="absolute inset-0 bg-obsidian/40" />
+          <div className="absolute inset-0 bg-obsidian/45" />
           <div
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "linear-gradient(to top, rgb(8 31 47) 0%, rgb(8 31 47 / 0.75) 35%, transparent 70%)",
+                "linear-gradient(to top, rgb(8 31 47) 0%, rgb(8 31 47) 42%, rgb(8 31 47 / 0.75) 58%, transparent 85%)",
             }}
           />
         </div>

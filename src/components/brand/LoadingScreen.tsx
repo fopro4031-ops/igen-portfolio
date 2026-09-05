@@ -2,7 +2,7 @@
 
 import { AnimatePresence, m } from "framer-motion";
 import { useEffect, useState } from "react";
-import { RibbonMotif } from "./RibbonMotif";
+import { LogoMark } from "./LogoMark";
 import { useReducedMotion } from "@/animations/hooks/useReducedMotion";
 import { DURATION, EASE_CINEMATIC } from "@/animations/transitions";
 
@@ -52,7 +52,7 @@ export function LoadingScreen() {
           }
           transition={{ duration: DURATION.slow, ease: EASE_CINEMATIC }}
         >
-          <RibbonMotif state={exiting ? "draw" : "loading"} size={72} glow />
+          <LogoMark size={96} animation="pulse" />
         </m.div>
       )}
     </AnimatePresence>
