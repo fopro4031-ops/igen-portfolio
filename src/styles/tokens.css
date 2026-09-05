@@ -1,0 +1,52 @@
+@theme {
+  /* Brand palette — monochromatic dark-blue ramp, darkest to lightest */
+  --color-obsidian: #081f2f;
+  --color-gunmetal: #243d52;
+  --color-outer-space: #495f73;
+  --color-blue-gray: #738496;
+  --color-steel: #acbccc;
+
+  /* Accent — the logo's own cyan, sanctioned as a real UI accent (links,
+     active states, hover glows, focus rings), not a decoration-only color. */
+  --color-accent-cyan: #38cfff;
+
+  /* Logo mark gradient — native brand blues, used for the ribbon motif and
+     the hero's headline-highlight gradient. */
+  --color-ribbon-start: #1d4fd8;
+  --color-ribbon-end: #38cfff;
+
+  /* Typography */
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Motion */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Elevation — brighter, cyan-leaning glow so accents actually read as lit,
+     not a faint gray haze. */
+  --shadow-glow-soft: 0 0 32px color-mix(in oklab, var(--color-accent-cyan) 35%, transparent);
+  --shadow-glow-strong: 0 0 64px color-mix(in oklab, var(--color-accent-cyan) 55%, transparent);
+}
+
+:root {
+  --gradient-brand: linear-gradient(
+    135deg,
+    var(--color-obsidian) 0%,
+    var(--color-gunmetal) 55%,
+    var(--color-outer-space) 100%
+  );
+  --gradient-glow: radial-gradient(
+    circle at 50% 0%,
+    color-mix(in oklab, var(--color-blue-gray) 25%, transparent) 0%,
+    transparent 60%
+  );
+}
+
+/* Arabic gets its own type family (Latin faces above have no Arabic
+   glyphs) — swapping the two theme-level font tokens here means every
+   component that already uses font-display/font-sans picks it up for free. */
+html[dir="rtl"] {
+  --font-display: var(--font-plex-arabic);
+  --font-sans: var(--font-plex-arabic);
+}
