@@ -22,6 +22,8 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <a
               key={link.label}
               href={link.href}
+              target={link.href.startsWith("http") ? "_blank" : undefined}
+              rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="text-sm text-blue-gray transition-colors hover:text-steel"
             >
               {link.label}

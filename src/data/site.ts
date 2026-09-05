@@ -6,6 +6,6 @@ export const siteConfig = {
   social: [
     { label: "GitHub", href: "#" },
     { label: "LinkedIn", href: "#" },
-    { label: "Instagram", href: "#" },
+    { label: "Instagram", href: "https://www.instagram.com/igen.web" },
   ],
 };
