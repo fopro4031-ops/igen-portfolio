@@ -12,6 +12,13 @@ const en = {
     open: "Open menu",
     close: "Close menu",
   },
+  socialFab: {
+    open: "Open social links",
+    close: "Close social links",
+    whatsapp: "WhatsApp",
+    instagram: "Instagram",
+    linkedin: "LinkedIn",
+  },
   buttons: {
     letsTalk: "Let's talk",
     viewCaseStudy: "View project",

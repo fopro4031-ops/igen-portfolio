@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoSrc from "@/assets/brand/igen-logo.jpg";
+import markSrc from "@/assets/brand/igen-mark-icon.png";
 import type { Locale } from "@/i18n/config";
 
 interface IgenLogoProps {
@@ -15,20 +15,20 @@ export function IgenLogo({
   locale,
   homeLabel,
   variant = "full",
-  size = 36,
+  size = 48,
   className,
 }: IgenLogoProps) {
   const icon = (
     <span
-      className="relative inline-block shrink-0 overflow-hidden rounded-lg"
+      className="relative inline-block shrink-0"
       style={{ width: size, height: size }}
     >
       <Image
-        src={logoSrc}
+        src={markSrc}
         alt="IGEN"
         fill
         sizes={`${size}px`}
-        className="object-cover"
+        className="object-contain"
         priority
       />
     </span>

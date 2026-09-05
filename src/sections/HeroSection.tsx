@@ -1,9 +1,10 @@
 "use client";
 
 import { m } from "framer-motion";
+import Image from "next/image";
+import markSrc from "@/assets/brand/igen-mark-icon.png";
 import { AmbientBackground } from "@/components/brand/AmbientBackground";
 import { HeroGridBackground } from "@/components/brand/HeroGridBackground";
-import { RibbonMotif } from "@/components/brand/RibbonMotif";
 import { LinkButton } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { fadeUp } from "@/animations/variants/fade";
@@ -17,9 +18,14 @@ export function HeroSection({ locale, dict }: { locale: Locale; dict: Dictionary
       <HeroGridBackground />
       <AmbientBackground strength="strong" />
 
-      <div className="pointer-events-none absolute -end-40 top-1/2 -translate-y-1/2 opacity-30 md:opacity-50">
-        <RibbonMotif state="draw" size={640} glow />
-      </div>
+      <m.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+        className="pointer-events-none absolute -end-32 top-1/2 aspect-square w-[520px] -translate-y-1/2 opacity-40 md:-end-20 md:w-[720px] md:opacity-60"
+      >
+        <Image src={markSrc} alt="" fill sizes="720px" className="object-contain" priority />
+      </m.div>
 
       <Container>
         <m.div

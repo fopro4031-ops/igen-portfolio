@@ -16,7 +16,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <header className="fixed inset-x-0 top-0 z-[150] border-b border-outer-space/20 bg-obsidian/70 backdrop-blur-md">
       <Container className="flex items-center justify-between py-4">
-        <IgenLogo locale={locale} homeLabel={dict.brand.homeAlt} />
+        <IgenLogo locale={locale} homeLabel={dict.brand.homeAlt} size={60} />
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (

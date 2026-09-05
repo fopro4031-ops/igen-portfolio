@@ -10,6 +10,7 @@ import { MotionProvider } from "@/animations/MotionProvider";
 import { LoadingScreen } from "@/components/brand/LoadingScreen";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SocialFab } from "@/components/layout/SocialFab";
 import { SkipToContent } from "@/components/layout/SkipToContent";
 import { ScrollRestorer } from "@/components/layout/ScrollRestorer";
 import { locales, isLocale, type Locale } from "@/i18n/config";
@@ -91,6 +92,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer locale={locale} dict={dict} />
+          <SocialFab dict={dict} />
         </MotionProvider>
       </body>
     </html>

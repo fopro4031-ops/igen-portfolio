@@ -14,6 +14,13 @@ const ar: typeof en = {
     open: "فتح القائمة",
     close: "إغلاق القائمة",
   },
+  socialFab: {
+    open: "فتح روابط التواصل",
+    close: "إغلاق روابط التواصل",
+    whatsapp: "واتساب",
+    instagram: "إنستجرام",
+    linkedin: "لينكد إن",
+  },
   buttons: {
     letsTalk: "لنتحدث",
     viewCaseStudy: "عرض المشروع",
