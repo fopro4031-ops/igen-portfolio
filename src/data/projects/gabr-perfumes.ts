@@ -15,6 +15,7 @@ export const gabrPerfumes: Project = {
   techStack: [
     { name: "Next.js", category: "frontend" },
     { name: "React", category: "frontend" },
+    { name: "Express", category: "backend" },
     { name: "Tailwind CSS", category: "styling" },
     { name: "Framer Motion", category: "styling" },
   ],
@@ -109,6 +110,7 @@ export const gabrPerfumes: Project = {
           items: [
             { name: "Next.js", category: "frontend" },
             { name: "React", category: "frontend" },
+            { name: "Express", category: "backend" },
             { name: "Tailwind CSS", category: "styling" },
             { name: "Framer Motion", category: "styling" },
           ],
@@ -218,6 +220,7 @@ export const gabrPerfumes: Project = {
           items: [
             { name: "Next.js", category: "frontend" },
             { name: "React", category: "frontend" },
+            { name: "Express", category: "backend" },
             { name: "Tailwind CSS", category: "styling" },
             { name: "Framer Motion", category: "styling" },
           ],
