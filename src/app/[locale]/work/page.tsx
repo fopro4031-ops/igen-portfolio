@@ -13,7 +13,23 @@ export async function generateMetadata(
   const { locale: rawLocale } = await props.params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : "en";
   const dict = getDictionary(locale);
-  return { title: dict.work.title, description: dict.work.subtitle };
+  return {
+    title: dict.work.title,
+    description: dict.work.subtitle,
+    alternates: { canonical: `/${locale}/work` },
+    openGraph: {
+      title: dict.work.heading,
+      description: dict.work.subtitle,
+      url: `/${locale}/work`,
+      siteName: "IGEN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.work.heading,
+      description: dict.work.subtitle,
+    },
+  };
 }
 
 export default async function WorkIndexPage(props: PageProps<"/[locale]/work">) {

@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "IGEN",
   role: "Creative Developer",
   email: "agencyigen87@gmail.com",
-  url: "http://localhost:3000",
+  url: "https://igen-portfolio.vercel.app",
   social: [
     { label: "GitHub", href: "#" },
     { label: "LinkedIn", href: "#" },

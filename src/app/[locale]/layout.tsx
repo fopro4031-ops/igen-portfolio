@@ -15,6 +15,7 @@ import { SkipToContent } from "@/components/layout/SkipToContent";
 import { ScrollRestorer } from "@/components/layout/ScrollRestorer";
 import { locales, isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/getDictionary";
+import { siteConfig } from "@/data/site";
 import "../globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -52,12 +53,34 @@ export async function generateMetadata(
   const locale: Locale = isLocale(rawLocale) ? rawLocale : "en";
   const dict = getDictionary(locale);
 
+  const title = `IGEN — ${dict.hero.headlineLine1} ${dict.hero.headlineHighlight}`;
+  const description = dict.hero.subhead;
+  const ogLocale = locale === "ar" ? "ar_EG" : "en_US";
+
   return {
+    metadataBase: new URL(siteConfig.url),
     title: {
-      default: `IGEN — ${dict.hero.headlineLine1} ${dict.hero.headlineHighlight}`,
+      default: title,
       template: "%s · IGEN",
     },
-    description: dict.hero.subhead,
+    description,
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { en: "/en", ar: "/ar" },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/${locale}`,
+      siteName: "IGEN",
+      locale: ogLocale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 

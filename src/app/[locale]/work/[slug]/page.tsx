@@ -25,7 +25,23 @@ export async function generateMetadata(
   if (!project) return {};
   const content = project.content[locale];
 
-  return { title: content.name, description: content.summary };
+  return {
+    title: content.name,
+    description: content.summary,
+    alternates: { canonical: `/${locale}/work/${slug}` },
+    openGraph: {
+      title: content.name,
+      description: content.tagline,
+      url: `/${locale}/work/${slug}`,
+      siteName: "IGEN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.name,
+      description: content.tagline,
+    },
+  };
 }
 
 export default async function ProjectPage(
