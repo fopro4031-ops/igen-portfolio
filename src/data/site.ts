@@ -4,15 +4,15 @@ export const siteConfig = {
   email: "agencyigen87@gmail.com",
   url: "https://igen-portfolio.vercel.app",
   social: [
-    { label: "GitHub", href: "#" },
-    { label: "LinkedIn", href: "#" },
     { label: "Instagram", href: "https://www.instagram.com/igen.4" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/mahmoud-essam-0b8a7342a",
+    },
   ],
-  // Used by the floating social button (SocialFab). TODO: replace the
-  // WhatsApp number and LinkedIn URL with the real ones.
+  // Used by the floating social button (SocialFab).
   fab: {
-    whatsapp: "https://wa.me/000000000",
     instagram: "https://www.instagram.com/igen.4",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/mahmoud-essam-0b8a7342a",
   },
 };

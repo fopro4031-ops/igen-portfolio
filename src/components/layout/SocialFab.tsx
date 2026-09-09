@@ -6,7 +6,6 @@ import {
   InstagramIcon,
   LinkedInIcon,
   ShareNodesIcon,
-  WhatsAppIcon,
 } from "@/components/icons/SocialIcons";
 import { siteConfig } from "@/data/site";
 import type { Dictionary } from "@/i18n/getDictionary";
@@ -15,7 +14,6 @@ export function SocialFab({ dict }: { dict: Dictionary }) {
   const [open, setOpen] = useState(false);
 
   const items = [
-    { key: "whatsapp", href: siteConfig.fab.whatsapp, label: dict.socialFab.whatsapp, Icon: WhatsAppIcon },
     { key: "instagram", href: siteConfig.fab.instagram, label: dict.socialFab.instagram, Icon: InstagramIcon },
     { key: "linkedin", href: siteConfig.fab.linkedin, label: dict.socialFab.linkedin, Icon: LinkedInIcon },
   ];

@@ -15,7 +15,6 @@ const en = {
   socialFab: {
     open: "Open social links",
     close: "Close social links",
-    whatsapp: "WhatsApp",
     instagram: "Instagram",
     linkedin: "LinkedIn",
   },
